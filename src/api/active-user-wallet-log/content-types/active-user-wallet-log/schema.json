@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "active_user_wallet_logs",
+  "info": {
+    "singularName": "active-user-wallet-log",
+    "pluralName": "active-user-wallet-logs",
+    "displayName": "Active User Wallet Log",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "referal_earn": {
+      "type": "float"
+    },
+    "tiers_earn": {
+      "type": "float"
+    },
+    "withdrawal": {
+      "type": "float"
+    },
+    "approve": {
+      "type": "boolean",
+      "default": false
+    },
+    "active_user_tiers_log": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::active-user-tiers-log.active-user-tiers-log",
+      "mappedBy": "active_user_wallet_log"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "active_user_wallet_logs"
+    }
+  }
+}

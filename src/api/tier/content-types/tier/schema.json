@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tiers",
+  "info": {
+    "singularName": "tier",
+    "pluralName": "tiers",
+    "displayName": "tier"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "number": {
+      "type": "integer"
+    },
+    "subscription": {
+      "type": "integer"
+    },
+    "earn": {
+      "type": "integer"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "active_user_tiers_logs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::active-user-tiers-log.active-user-tiers-log",
+      "mappedBy": "tiers"
+    }
+  }
+}

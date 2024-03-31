@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "refers",
+  "info": {
+    "singularName": "refer",
+    "pluralName": "refers",
+    "displayName": "Refer",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "by": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "refered"
+    },
+    "to": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "referd_by"
+    }
+  }
+}

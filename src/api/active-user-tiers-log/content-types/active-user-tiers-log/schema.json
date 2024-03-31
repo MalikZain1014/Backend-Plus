@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "active_user_tiers_logs",
+  "info": {
+    "singularName": "active-user-tiers-log",
+    "pluralName": "active-user-tiers-logs",
+    "displayName": "Active User Tiers Log",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tiers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tier.tier",
+      "inversedBy": "active_user_tiers_logs"
+    },
+    "expire_time": {
+      "type": "datetime"
+    },
+    "completed": {
+      "type": "boolean",
+      "default": false
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "active_user_tiers_logs"
+    },
+    "txid": {
+      "type": "string"
+    },
+    "active_user_wallet_log": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::active-user-wallet-log.active-user-wallet-log",
+      "inversedBy": "active_user_tiers_log"
+    }
+  }
+}

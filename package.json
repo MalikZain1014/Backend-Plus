@@ -1,0 +1,32 @@
+{
+  "name": "meta-plus-strapi-updated",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "@strapi/plugin-i18n": "4.11.2",
+    "@strapi/plugin-users-permissions": "4.11.2",
+    "@strapi/strapi": "4.11.2",
+    "pg": "^8.11.0",
+    "pg-connection-string": "^2.6.0"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "f2212cb8-3e0b-421c-bc93-263b30257c6d"
+  },
+  "engines": {
+    "node": "18.16.1",
+    "npm": "9.5.1",
+    "yarn": "1.22.19"
+  },
+  "license": "MIT"
+}
